@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+:root {
+  /* --primary-dark: #00040F; */
+  --primary-light: #709dff;
+  --primary-purple: #6A16C3;
+  --primary-blue: #055299;
+  background: #00040F;
+}
+
+.text-gradient {
+  /* background: rgb(106,22,195); */
+  background: linear-gradient(90deg, rgba(106,22,195,1) 0%, rgba(5,82,153,1) 35%, rgba(0,212,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-hover-effect {
+  display: flex;
+  padding: 0.875em 2em;
+  background: linear-gradient(90deg, rgba(5, 82, 153, 1), transparent) rgba(0, 212, 255, 1);
+  font-family: inherit;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 1s;
+  place-content: center;
+}
+
+.gradient-hover-effect:hover,
+.gradient-hover-effect:focus {
+  background-color: #6A16C3;
+  color: #fff;
+}
+
+.flex_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex_grid > * {
+  flex: 1 1;
+  min-width: 200px;
+  height: 80px;
+  align-items: center;
+  object-fit: contain;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth
+  }
+
+  body {
+    @apply font-[Poppins]
+  }
+
+  li {
+    @apply p-4 text-sm
+  }
+
+  button {
+    @apply px-4 py-2 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white
+  }
+
+  h2 {
+    @apply text-xl font-bold
+  }
+}
